@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #F7F8FA;
+    --surface: #FFFFFF;
+    --border-color: #E4E7EC;
+    --border-subtle: #F2F4F7;
+    --ink-primary: #101828;
+    --ink-secondary: #475467;
+    --ink-muted: #667085;
+    --ink-light: #98A2B3;
+    --accent: #2E5FF2;
+    --accent-hover: #1D4ED8;
+    --accent-light: #EFF4FF;
+    --success: #12B76A;
+    --success-light: #ECFDF3;
+    --warning: #F79009;
+    --warning-light: #FFFAEB;
+    --critical: #F04438;
+    --critical-light: #FEF3F2;
+    --panel-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 12px rgba(16, 24, 40, 0.05);
+    --panel-shadow-hover: 0 4px 6px rgba(16, 24, 40, 0.06), 0 10px 20px rgba(16, 24, 40, 0.08);
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--ink-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+}
+
+.ops-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--panel-shadow);
+}
+
+.ops-card-interactive {
+  transition: all 0.2s ease-in-out;
+}
+
+.ops-card-interactive:hover {
+  box-shadow: var(--panel-shadow-hover);
+  border-color: #D0D5DD;
+}
+
+.font-mono-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Custom crisp scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F2F4F7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #D0D5DD;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #98A2B3;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
