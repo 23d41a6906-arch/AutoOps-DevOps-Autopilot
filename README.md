@@ -118,7 +118,7 @@ npm install
 npm run dev
 ```
 
-Open your browser to [Click here to view the project](http://127.0.0.1:5176/) (or the port displayed in your terminal).
+Open your browser or [Click here to view the project](http://127.0.0.1:5176/) (or the port displayed in your terminal).
 
 ### Optional: Live AI Mode with Groq
 To enable real-time dynamic LLM reasoning for the Live Agent Feed:
